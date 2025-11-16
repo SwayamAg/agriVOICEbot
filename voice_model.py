@@ -34,7 +34,12 @@ def load_image_from_path(image_path):
         return None
 
 def predict_plant(image):
-    """Send image to pre-built model API and get prediction"""
+    """Send image to pre-built model API and get prediction
+    
+    Note: The API endpoint used here is from the Plant-Identification repository
+    developed by the same author: https://github.com/SwayamAg/Plant-Identification
+    This FastAPI-based service identifies 24 plant species using a TensorFlow/Keras CNN.
+    """
     API_ENDPOINT = "https://web-production-b516.up.railway.app/predict"
     
     img_byte_arr = io.BytesIO()

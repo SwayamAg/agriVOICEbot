@@ -112,7 +112,9 @@ The app will automatically use the port provided by Heroku's `PORT` environment 
 
 ### External API
 
-The plant classification model is hosted externally. Update the API endpoint in `voice_model.py` if needed:
+The plant classification model is hosted externally. The API endpoint used in `voice_model.py` is from the [Plant-Identification](https://github.com/SwayamAg/Plant-Identification) repository, which is a FastAPI-based image classification API that identifies 24 plant species using a TensorFlow/Keras CNN.
+
+Update the API endpoint in `voice_model.py` if needed:
 
 ```python
 API_ENDPOINT = "https://web-production-b516.up.railway.app/predict"
